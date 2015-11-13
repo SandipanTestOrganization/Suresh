@@ -26,10 +26,10 @@ public class SHOELogger {
 	public static void Log(String message, LogLevel level){
 		switch(level) {
 			case DEBUG:
-				m_logger.debug( message);
+				m_logger.debug(message);
 				break;
 			case INFO :
-				m_logger.info( message);
+				m_logger.info(message);
 				break;
 			case WARN:
 				m_logger.warn(message);
