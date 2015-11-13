@@ -1,5 +1,5 @@
 package suresh.shoeshope.logger;
 
-public class Logger {
+public class SHOELogger {
 
 }
