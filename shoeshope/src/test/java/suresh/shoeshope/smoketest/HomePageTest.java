@@ -10,25 +10,23 @@ import suresh.shoeshope.pages.Pages;
 import suresh.shoeshope.logger.SHOELogger;
 
 public class HomePageTest {
-
-	//SHOELogger logger; 
 	
 	@Before
 	public void Init(){
+		SHOELogger.Configure();
 		Browser.Open();
-		//SHOELogger.Log("Browser Opening successfully");
+		SHOELogger.Log("Browser Opening successfully");
 	}
 	@After
 	public void Cleanup(){
 		Browser.Close();
-		//SHOELogger.Log("Browser closed successfully");
+		SHOELogger.Log("Browser closed successfully");
 	}
 	@Test
 	public void Can_Go_To_HomePage_Test(){
-		//SHOELogger.Log("Can_Go_To_HomePage_Test Started");
+		SHOELogger.Log("Can_Go_To_HomePage_Test Started");
 		Pages.HomePage().GoTo();
 		Assert.assertTrue(Pages.HomePage().IsAtHomePage());
-		//SHOELogger.Log("Can_Go_To_HomePage_Test Completed");
-		//System.out.println(Pages.HomePage().IsAtHomePage());
+		SHOELogger.Log("Can_Go_To_HomePage_Test Completed");
 	}
 }
