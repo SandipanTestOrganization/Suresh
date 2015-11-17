@@ -4,15 +4,21 @@ import suresh.shoeshope.browser.Browser;
 
 public class HomePage {
 
-	public String baseURL = "http://182.72.246.194/prestashop_1.6.1.1/prestashop/";
-	public String homeTitle = "ShoeFactory";
+	public static String baseURL = "http://182.72.246.194/prestashop_1.6.1.1/prestashop/";
+	public static String homeTitle = "ShoeFactory";
 	
-	public void GoTo() {
+	public static void GoTo() {
 		Browser.Driver().navigate().to(baseURL);
 	}
 
-	public boolean IsAtHomePage() {
+	public static boolean IsAtHomePage() {
 		return Browser.Driver().getTitle().equals(homeTitle);
+	}
+
+	public static HeaderPage Header() {
+		// TODO Auto-generated method stub
+		HeaderPage headerPage = new HeaderPage();
+		return headerPage;
 	}
 
 	

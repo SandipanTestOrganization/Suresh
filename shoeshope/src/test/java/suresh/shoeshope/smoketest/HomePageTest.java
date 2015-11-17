@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import suresh.shoeshope.browser.Browser;
+import suresh.shoeshope.pages.HomePage;
 import suresh.shoeshope.pages.Pages;
 import suresh.shoeshope.logger.SHOELogger;
 
@@ -25,8 +26,9 @@ public class HomePageTest {
 	@Test
 	public void Can_Go_To_HomePage_Test(){
 		SHOELogger.Log("Can_Go_To_HomePage_Test Started");
-		Pages.HomePage().GoTo();
-		Assert.assertTrue(Pages.HomePage().IsAtHomePage());
+		HomePage.GoTo();
+		//Assert.assertTrue(Pages.HomePage().IsAtHomePage());
+		Assert.assertTrue(HomePage.IsAtHomePage());
 		SHOELogger.Log("Can_Go_To_HomePage_Test Completed");
 	}
 }
